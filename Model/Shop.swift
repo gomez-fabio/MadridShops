@@ -6,7 +6,7 @@
 //  Copyright © 2017 Fabio Gomez. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public class Shop {
     var name         : String
@@ -14,11 +14,12 @@ public class Shop {
     var latitude     : Float? = nil
     var longitude    : Float? = nil
     var image        : String = ""
-    var logo         : String = ""
-    var openingHouse : String = ""
+    //var logo         : String = ""
+    var logo         : UIImage? = nil
+    var openingHours : String = ""
     var address      : String = ""
     
     public init(name: String) {
-        self.name =  name
+        self.name = name
     }
 }

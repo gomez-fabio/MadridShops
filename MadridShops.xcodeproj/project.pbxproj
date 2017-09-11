@@ -52,6 +52,7 @@
 		E5120D991F654D2800A67C46 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E5120D9B1F654F0300A67C46 /* ViewController+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CollectionViewController.swift"; sourceTree = "<group>"; };
 		E5120D9D1F6553AE00A67C46 /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
+		E59F2B681F65A680004ECEFD /* umbrella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = umbrella.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,7 @@
 		E51090B31F646AD60035DBD8 = {
 			isa = PBXGroup;
 			children = (
+				E59F2B671F65A669004ECEFD /* Resources */,
 				E51090BF1F646AD60035DBD8 /* AppDelegate.swift */,
 				E51090E11F64765B0035DBD8 /* Model */,
 				E51090E01F6476520035DBD8 /* View */,
@@ -159,6 +161,14 @@
 				E5120D991F654D2800A67C46 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E59F2B671F65A669004ECEFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E59F2B681F65A680004ECEFD /* umbrella.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

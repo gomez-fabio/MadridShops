@@ -19,7 +19,9 @@ class DownloadAllShopsInteractorFakeImplementation : DownloadAllShopsInteractor 
         
         for i in 0...10 {
             let shop = Shop(name: "Shop number \( i )")
-            shop.address = "Address \( i )"
+            shop.address      = "Address \( i )"
+            shop.logo         = #imageLiteral(resourceName: "umbrella.png")
+            shop.openingHours = "10:00-14:00 17:00-20:30"
             
             shops.add(shop: shop)
         }
