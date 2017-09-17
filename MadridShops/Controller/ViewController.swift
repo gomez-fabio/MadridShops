@@ -17,8 +17,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //let downloadShopInteractor : DownloadAllShopsInteractor = DownloadAllShopsInteractorFakeImplementation()
-        let downloadShopInteractor : DownloadAllShopsInteractor = DownloadAllShopsInteractorNSOperationImplementation()
+//        let downloadShopInteractor : DownloadAllShopsInteractor = DownloadAllShopsInteractorFakeImplementation() // Implementación Fake
+//        let downloadShopInteractor : DownloadAllShopsInteractor = DownloadAllShopsInteractorNSOperationImplementation() // Implementación con NSOperationQueue
+        let downloadShopInteractor : DownloadAllShopsInteractor = DownloadAllShopsinteractorNSURLSessionImplementation() // Implementación con NSURLSession
 //        downloadShopInteractor.execute(onSuccess: { (shops: Shops) in
 //                // todo OK
 //        }) { (error: Error) in
@@ -40,6 +41,25 @@ class ViewController: UIViewController {
         }
     }
 
+    // Método para lanzar el segue manualmente
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        let shop = self.shops?.get(index: indexPath.row)
+        self.performSegue(withIdentifier: "ShowShopDetailSegue", sender: shop)
+    }
+    
+    // Método que invoca el storyboard justo antes de mostrar el view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Compruebo desde que segue vengo con su identificador
+        if segue.identifier == "ShowShopDetailSegue" {
+            let vc = segue.destination as! ShopDetailViewController // Cast a nuestra clase para que no sea un view controller generico, y así tenga propiedades y métodos de nuestra clase
+            
+//            let indexPath = self.shopsCollectionView.indexPathsForSelectedItems![0] // Array de index path del collection view donde hemos tocado, cogemos el primer elemento.
+//            let shop      = self.shops?.get(index: indexPath.row) // Extraigo la tienda segun su index path
+//            vc.shop       = shop // esto es una inyección de dependencias de una propiedad
+            vc.shop = sender as! Shop
+        }
+    }
 
 }
 

@@ -24,6 +24,10 @@
 		E5120D9C1F654F0300A67C46 /* ViewController+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5120D9B1F654F0300A67C46 /* ViewController+CollectionViewController.swift */; };
 		E5120D9E1F6553AE00A67C46 /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5120D9D1F6553AE00A67C46 /* ShopCell.swift */; };
 		E561F8311F673CA700D4629C /* DownloadAllShopsInteractorNSOperationImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E561F8301F673CA700D4629C /* DownloadAllShopsInteractorNSOperationImplementation.swift */; };
+		E582A7AF1F6D9F6500C87AA5 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E582A7AE1F6D9F6500C87AA5 /* JSONParser.swift */; };
+		E582A7B11F6DA3A300C87AA5 /* DownloadAllShopsinteractorNSURLSessionImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E582A7B01F6DA3A300C87AA5 /* DownloadAllShopsinteractorNSURLSessionImplementation.swift */; };
+		E582A7B31F6DC2AF00C87AA5 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E582A7B21F6DC2AF00C87AA5 /* ShopDetailViewController.swift */; };
+		E582A7B61F6DF6DD00C87AA5 /* String+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E582A7B51F6DF6DD00C87AA5 /* String+Image.swift */; };
 		E59A99911F67124D007A1EEA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E59A99901F67124D007A1EEA /* Podfile */; };
 		E5B40FC61F671E0100C2518D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B40FC51F671E0100C2518D /* MainViewController.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +68,10 @@
 		E5120D9B1F654F0300A67C46 /* ViewController+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CollectionViewController.swift"; sourceTree = "<group>"; };
 		E5120D9D1F6553AE00A67C46 /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
 		E561F8301F673CA700D4629C /* DownloadAllShopsInteractorNSOperationImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsInteractorNSOperationImplementation.swift; sourceTree = "<group>"; };
+		E582A7AE1F6D9F6500C87AA5 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		E582A7B01F6DA3A300C87AA5 /* DownloadAllShopsinteractorNSURLSessionImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsinteractorNSURLSessionImplementation.swift; sourceTree = "<group>"; };
+		E582A7B21F6DC2AF00C87AA5 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
+		E582A7B51F6DF6DD00C87AA5 /* String+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Image.swift"; sourceTree = "<group>"; };
 		E59A99901F67124D007A1EEA /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		E5B40FC51F671E0100C2518D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				E51090BF1F646AD60035DBD8 /* AppDelegate.swift */,
+				E582A7B41F6DF67500C87AA5 /* Util */,
 				E51090E11F64765B0035DBD8 /* Model */,
 				E51090E01F6476520035DBD8 /* View */,
 				E51090DF1F6476480035DBD8 /* Controller */,
@@ -149,6 +158,7 @@
 				E51090C11F646AD60035DBD8 /* ViewController.swift */,
 				E5120D9B1F654F0300A67C46 /* ViewController+CollectionViewController.swift */,
 				E5B40FC51F671E0100C2518D /* MainViewController.swift */,
+				E582A7B21F6DC2AF00C87AA5 /* ShopDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,6 +176,7 @@
 		E51090E11F64765B0035DBD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E582A7AD1F6D9F4800C87AA5 /* Json Parser */,
 				E5120D911F64A99E00A67C46 /* Interactors */,
 				E51090E21F6476B80035DBD8 /* Shop.swift */,
 				E51090E41F647BF10035DBD8 /* Shops.swift */,
@@ -180,6 +191,7 @@
 				E5120D921F64AA4A00A67C46 /* DownloadAllShopsInteractor.swift */,
 				E5120D961F64AEAC00A67C46 /* DownloadAllShopsInteractorFakeImplementation.swift */,
 				E561F8301F673CA700D4629C /* DownloadAllShopsInteractorNSOperationImplementation.swift */,
+				E582A7B01F6DA3A300C87AA5 /* DownloadAllShopsinteractorNSURLSessionImplementation.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -192,6 +204,22 @@
 				4BAB7AE552108C61C99168EB /* Pods_MadridShopsTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E582A7AD1F6D9F4800C87AA5 /* Json Parser */ = {
+			isa = PBXGroup;
+			children = (
+				E582A7AE1F6D9F6500C87AA5 /* JSONParser.swift */,
+			);
+			path = "Json Parser";
+			sourceTree = "<group>";
+		};
+		E582A7B41F6DF67500C87AA5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E582A7B51F6DF6DD00C87AA5 /* String+Image.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +444,7 @@
 			files = (
 				E561F8311F673CA700D4629C /* DownloadAllShopsInteractorNSOperationImplementation.swift in Sources */,
 				E51090E31F6476B80035DBD8 /* Shop.swift in Sources */,
+				E582A7AF1F6D9F6500C87AA5 /* JSONParser.swift in Sources */,
 				E5120D9E1F6553AE00A67C46 /* ShopCell.swift in Sources */,
 				E51090C21F646AD60035DBD8 /* ViewController.swift in Sources */,
 				E51090C01F646AD60035DBD8 /* AppDelegate.swift in Sources */,
@@ -423,8 +452,11 @@
 				E5120D971F64AEAC00A67C46 /* DownloadAllShopsInteractorFakeImplementation.swift in Sources */,
 				E5120D9C1F654F0300A67C46 /* ViewController+CollectionViewController.swift in Sources */,
 				E5120D951F64AE5D00A67C46 /* Typealias.swift in Sources */,
+				E582A7B11F6DA3A300C87AA5 /* DownloadAllShopsinteractorNSURLSessionImplementation.swift in Sources */,
+				E582A7B31F6DC2AF00C87AA5 /* ShopDetailViewController.swift in Sources */,
 				E5120D931F64AA4A00A67C46 /* DownloadAllShopsInteractor.swift in Sources */,
 				E5B40FC61F671E0100C2518D /* MainViewController.swift in Sources */,
+				E582A7B61F6DF6DD00C87AA5 /* String+Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

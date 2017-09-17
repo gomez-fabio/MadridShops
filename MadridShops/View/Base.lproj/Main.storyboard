@@ -70,26 +70,26 @@
                                 <rect key="frame" x="0.0" y="365.5" width="375" height="301.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fQ5-gE-b5P">
-                                    <size key="itemSize" width="280" height="50"/>
+                                    <size key="itemSize" width="327" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopCell" id="0np-3f-qEB" customClass="ShopCell" customModule="MadridShops" customModuleProvider="target">
-                                        <rect key="frame" x="47.5" y="0.0" width="280" height="50"/>
+                                        <rect key="frame" x="2.5" y="0.0" width="370" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="38y-AZ-0XW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="69" height="50"/>
+                                                    <rect key="frame" x="1" y="0.0" width="69" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG0-4n-3Pz">
-                                                    <rect key="frame" x="70" y="14" width="210" height="21"/>
+                                                    <rect key="frame" x="84" y="14" width="210" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -97,6 +97,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <size key="customSize" width="370" height="50"/>
                                         <connections>
                                             <outlet property="imageView" destination="38y-AZ-0XW" id="D4O-7t-GLM"/>
                                             <outlet property="label" destination="aG0-4n-3Pz" id="swN-s3-QCp"/>
@@ -124,11 +125,56 @@
                     <navigationItem key="navigationItem" title="Shops" largeTitleDisplayMode="always" id="l2U-4y-OIC"/>
                     <connections>
                         <outlet property="shopsCollectionView" destination="Fto-Xv-8wu" id="nZR-1i-FMO"/>
+                        <segue destination="vNA-IB-abw" kind="show" identifier="ShowShopDetailSegue" id="4H0-jX-YUk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1452" y="125"/>
+            <point key="canvasLocation" x="1452" y="124.58770614692655"/>
+        </scene>
+        <!--Shop Detail View Controller-->
+        <scene sceneID="cP5-Us-Xjy">
+            <objects>
+                <viewController id="vNA-IB-abw" customClass="ShopDetailViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FDn-c9-S0b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAz-Cy-O4N">
+                                <rect key="frame" x="16" y="69" width="343" height="587"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Y6G-1Y-g6E">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="267"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <mutableString key="text">Lorem fistrum torpedo no te digo trigo por no llamarte Rodrigor ex ese pedazo de te voy a borrar el cerito aliquip llevame al sircoo aute está la cosa muy malar. No puedor dolore fistro se calle ustée jarl diodeno consectetur consectetur. Aliquip papaar papaar se calle ustée nostrud a peich et ese pedazo de duis sed. Commodo occaecat aliqua a peich. Ese hombree sexuarl va usté muy cargadoo occaecat. No te digo trigo por no llamarte Rodrigor quis ut tiene musho peligro magna ese hombree la caidita benemeritaar et officia enim. Ex esse adipisicing qui no te digo trigo por no llamarte Rodrigor elit se calle ustée qué dise usteer et ahorarr mamaar. Ahorarr nostrud commodo ullamco.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkD-a2-sVl">
+                                        <rect key="frame" x="0.0" y="269" width="343" height="318"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kDC-Us-beh" firstAttribute="trailing" secondItem="gAz-Cy-O4N" secondAttribute="trailing" constant="16" id="1RQ-sB-3mS"/>
+                            <constraint firstItem="gAz-Cy-O4N" firstAttribute="top" secondItem="kDC-Us-beh" secondAttribute="top" constant="5" id="VsL-eX-rzG"/>
+                            <constraint firstItem="gAz-Cy-O4N" firstAttribute="leading" secondItem="kDC-Us-beh" secondAttribute="leading" constant="16" id="hid-LQ-rhQ"/>
+                            <constraint firstItem="kDC-Us-beh" firstAttribute="bottom" secondItem="gAz-Cy-O4N" secondAttribute="bottom" constant="11" id="jnf-Wa-oW9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kDC-Us-beh"/>
+                    </view>
+                    <connections>
+                        <outlet property="shopDetailDescription" destination="Y6G-1Y-g6E" id="Sb8-Zh-0me"/>
+                        <outlet property="shopImage" destination="MkD-a2-sVl" id="KT0-On-9QR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FeM-4S-gP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2168.8000000000002" y="126.38680659670166"/>
         </scene>
     </scenes>
 </document>
