@@ -15,7 +15,7 @@ public class Shop {
     var longitude    : Float? = nil
     var image        : String = ""
     var logo         : String = ""
-    var openingHouse : String = ""
+    var openingHours : String = ""
     var address      : String = ""
     
     public init(name: String) {

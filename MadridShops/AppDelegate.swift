@@ -7,40 +7,32 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var cds = CoreDataStack() // Inicializamos el Core Data Stack
+    var context : NSManagedObjectContext?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.context = cds.createContainer(dbName: "MadridShops").viewContext // Extraemos el contexto de createContainer.
+        
+        // Estas tres lineas de abajo me sirven para crear un contexto que inyectarle a la cadena de vc que existen desde el rootVC hasta el que a mi me interesa inyectarle el contexto
+        let nav = self.window?.rootViewController as! UINavigationController // Me creo una propiedad que identifica el rootvc casting a Navigation (lo puedo ver como root en el story board)
+        let mainVC = nav.topViewController as! MainViewController // el topVC del nav anterior es el mainviewcontroller (de nuevo lo veo en el story board)
+        mainVC.context = self.context  // a este vc en su propiedad context, le inyecto el contexto que he creado en el appDelegate.
         
         return true
     }
 
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
-
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        guard let context = self.context else {return} // Hacemos un guard porque el contexto es opcional.
+        self.cds.saveContext(context: context) // Grabamos al pasar al background.
     }
 
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
 
 
 }

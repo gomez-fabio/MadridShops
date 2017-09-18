@@ -8,8 +8,11 @@
 
 import UIKit
 import FillableLoaders
+import CoreData
 
 class MainViewController: UIViewController {
+    
+    var context: NSManagedObjectContext! // Propiedad que me creo para que me inyecten el contexto y a su vez yo lo paso al siguiente VC
     
     @IBOutlet weak var redRectangle: UIView!
     
@@ -82,4 +85,10 @@ class MainViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowShopsSegue" {
+            let vc = segue.destination as! ViewController
+            vc.context = self.context
+        }
+    }
 }

@@ -25,4 +25,20 @@ extension String {
             }
         }
     }
+    
+    func loadImage2 (into imageView: UIImageView) {
+        let session = URLSession.shared
+        if let url = URL(string: self), let data = NSData(contentsOf: url), let image = UIImage(data: data as Data) {
+            let task = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
+                if error == nil {
+                    OperationQueue.main.addOperation {
+                        imageView.image = image
+                    }
+                } else {
+                    // error
+                }
+            }
+        task.resume()
+        }
+    }
 }

@@ -15,14 +15,18 @@ class ShopDetailViewController: UIViewController {
     
     @IBOutlet weak var shopDetailDescription: UITextView!
     @IBOutlet weak var shopImage: UIImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = self.shop?.name
         self.shopDetailDescription.text = self.shop?.description
-        self.shop?.image.loadImage(into: shopImage)
-
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+        self.shop?.image.loadImage2(into: shopImage)
+        self.activityIndicator.isHidden = true
+        self.activityIndicator.stopAnimating()
     }
 
    
