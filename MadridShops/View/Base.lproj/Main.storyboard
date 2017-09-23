@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -105,7 +104,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fNE-Kl-C0g">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNE-Kl-C0g">
                                 <rect key="frame" x="0.0" y="64" width="414" height="336"/>
                             </mapView>
                         </subviews>
@@ -124,6 +123,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Shops" largeTitleDisplayMode="always" id="l2U-4y-OIC"/>
                     <connections>
+                        <outlet property="map" destination="fNE-Kl-C0g" id="wVQ-iv-NAF"/>
                         <outlet property="shopsCollectionView" destination="Fto-Xv-8wu" id="nZR-1i-FMO"/>
                         <segue destination="vNA-IB-abw" kind="show" identifier="ShowShopDetailSegue" id="4H0-jX-YUk"/>
                     </connections>

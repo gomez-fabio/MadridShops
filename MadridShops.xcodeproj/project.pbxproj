@@ -35,6 +35,11 @@
 		E582A7B61F6DF6DD00C87AA5 /* String+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E582A7B51F6DF6DD00C87AA5 /* String+Image.swift */; };
 		E59A99911F67124D007A1EEA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E59A99901F67124D007A1EEA /* Podfile */; };
 		E5B40FC61F671E0100C2518D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B40FC51F671E0100C2518D /* MainViewController.swift */; };
+		E5F177501F70538B00DCAD5F /* MapShops.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F1774F1F70538B00DCAD5F /* MapShops.swift */; };
+		E5F177521F70615200DCAD5F /* ExecuteOnceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F177511F70615200DCAD5F /* ExecuteOnceInteractor.swift */; };
+		E5F177541F7061EB00DCAD5F /* SetExecutedOnceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F177531F7061EB00DCAD5F /* SetExecutedOnceInteractor.swift */; };
+		E5F177561F7068C200DCAD5F /* SetExecutedOnceInteractorImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F177551F7068C200DCAD5F /* SetExecutedOnceInteractorImplementation.swift */; };
+		E5F177581F7069A700DCAD5F /* ExecuteOnceInteractorImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F177571F7069A700DCAD5F /* ExecuteOnceInteractorImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +89,11 @@
 		E582A7B51F6DF6DD00C87AA5 /* String+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Image.swift"; sourceTree = "<group>"; };
 		E59A99901F67124D007A1EEA /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		E5B40FC51F671E0100C2518D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E5F1774F1F70538B00DCAD5F /* MapShops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapShops.swift; sourceTree = "<group>"; };
+		E5F177511F70615200DCAD5F /* ExecuteOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractor.swift; sourceTree = "<group>"; };
+		E5F177531F7061EB00DCAD5F /* SetExecutedOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetExecutedOnceInteractor.swift; sourceTree = "<group>"; };
+		E5F177551F7068C200DCAD5F /* SetExecutedOnceInteractorImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetExecutedOnceInteractorImplementation.swift; sourceTree = "<group>"; };
+		E5F177571F7069A700DCAD5F /* ExecuteOnceInteractorImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractorImplementation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +197,7 @@
 		E51090E11F64765B0035DBD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E5F1774E1F70534E00DCAD5F /* Mappers */,
 				E582A7AD1F6D9F4800C87AA5 /* Json Parser */,
 				E5120D911F64A99E00A67C46 /* Interactors */,
 				E51090E21F6476B80035DBD8 /* Shop.swift */,
@@ -205,6 +216,10 @@
 				E5120D961F64AEAC00A67C46 /* DownloadAllShopsInteractorFakeImplementation.swift */,
 				E561F8301F673CA700D4629C /* DownloadAllShopsInteractorNSOperationImplementation.swift */,
 				E582A7B01F6DA3A300C87AA5 /* DownloadAllShopsinteractorNSURLSessionImplementation.swift */,
+				E5F177531F7061EB00DCAD5F /* SetExecutedOnceInteractor.swift */,
+				E5F177551F7068C200DCAD5F /* SetExecutedOnceInteractorImplementation.swift */,
+				E5F177511F70615200DCAD5F /* ExecuteOnceInteractor.swift */,
+				E5F177571F7069A700DCAD5F /* ExecuteOnceInteractorImplementation.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -244,6 +259,14 @@
 				E582A7B51F6DF6DD00C87AA5 /* String+Image.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		E5F1774E1F70534E00DCAD5F /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				E5F1774F1F70538B00DCAD5F /* MapShops.swift */,
+			);
+			path = Mappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,10 +494,15 @@
 				E582A7AF1F6D9F6500C87AA5 /* JSONParser.swift in Sources */,
 				E517BE401F703BEB00502522 /* SaveAllShopsInteractor.swift in Sources */,
 				E5120D9E1F6553AE00A67C46 /* ShopCell.swift in Sources */,
+				E5F177581F7069A700DCAD5F /* ExecuteOnceInteractorImplementation.swift in Sources */,
+				E5F177521F70615200DCAD5F /* ExecuteOnceInteractor.swift in Sources */,
 				E51090C21F646AD60035DBD8 /* ViewController.swift in Sources */,
 				E517BE421F703D7800502522 /* SaveAllShopsInteractorImplementation.swift in Sources */,
+				E5F177541F7061EB00DCAD5F /* SetExecutedOnceInteractor.swift in Sources */,
 				E51090C01F646AD60035DBD8 /* AppDelegate.swift in Sources */,
+				E5F177501F70538B00DCAD5F /* MapShops.swift in Sources */,
 				E51090E51F647BF10035DBD8 /* Shops.swift in Sources */,
+				E5F177561F7068C200DCAD5F /* SetExecutedOnceInteractorImplementation.swift in Sources */,
 				E5120D971F64AEAC00A67C46 /* DownloadAllShopsInteractorFakeImplementation.swift in Sources */,
 				E5120D9C1F654F0300A67C46 /* ViewController+CollectionViewController.swift in Sources */,
 				E5120D951F64AE5D00A67C46 /* Typealias.swift in Sources */,
@@ -639,7 +667,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NW392JLHHF;
 				INFOPLIST_FILE = MadridShops/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fgp.MadridShops;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -654,7 +684,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NW392JLHHF;
 				INFOPLIST_FILE = MadridShops/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fgp.MadridShops;
 				PRODUCT_NAME = "$(TARGET_NAME)";
